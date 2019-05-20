@@ -1,0 +1,13 @@
+
+<div class="p-3">
+  <span>
+    <h1 class="mb-3"><%= @restaurant.name %></h1>
+    <p> In the mood for <%= @restaurant.category %> food?</p>
+    <p> <i class="fas fa-map-marker-alt"></i> Find them at: <br> <%= @restaurant.address %></p>
+    <p> <i class="fas fa-phone"></i> Make a reservation: <br> <%=  @restaurant.phone_number %></p>
+  </span>
+
+  <%= link_to "You've eaten there ? Give us your opinion!", new_restaurant_review_path %>
+  <hr>
+  <%= link_to "Back to Restaurants list", restaurants_path %>
+</div>

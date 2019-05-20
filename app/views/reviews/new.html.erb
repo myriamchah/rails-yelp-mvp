@@ -1,1 +1,12 @@
-new.html.erb
+<h1  class="p-3">Add a review to <%= @restaurant.name%>: </h1>
+
+<div class="p-3">
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.text_area :content, label: 'What did you think of this restaurant ?', size: "70x12" %>
+  <%= f.input :rating, collection: Review::RATINGS %>
+  <%= f.button :submit, "Thank you!", class: "btn btn-primary d-block" %>
+<% end %>
+<hr>
+<%= link_to "Back to Restaurants list", restaurants_path %>
+
+</div>
